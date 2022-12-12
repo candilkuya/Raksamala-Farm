@@ -33,138 +33,79 @@
 
     <style>
 
-.datainput{position:relative;margin:5px 0 20px}.datainput p{font-size:12px;background:#eee;display:inline-block;padding:5px 15px;border-radius:.5rem}.whatsapp-form textarea{min-height:120px}.datainput select{padding:12px 0;color:#555;font-size:14px;width:100%;border:0;border-bottom:1px solid #ddd;outline:none;background:#fff}.datainput input,.datainput textarea{font-size:15px;padding:15px 0;display:block;width:100%;border:none;border-bottom:1px solid #ddd}.datainput input:focus,.datainput textarea:focus{outline:none}.datainput label{color:#999;font-size:14px;font-weight:400;position:absolute;pointer-events:none;left:0;top:18px;transition:.2s ease all}.datainput input:focus~label,.datainput input:valid~label,.datainput textarea:focus~label,.datainput textarea:valid~label{top:-10px;font-size:14px;color:#21a51f}#notif-license span{font-size:40px}#notif-license{display:none;position:fixed}.bar{position:relative;display:block;width:100%}.bar:before,.bar:after{content:'';height:2px;width:0;bottom:1px;position:absolute;background:#21a51f;transition:.2s ease all}.bar:before{left:50%}.bar:after{right:50%}.datainput input:focus~.bar:before,.datainput input:focus~.bar:after,.datainput textarea:focus~.bar:before,.datainput textarea:focus~.bar:after{width:50%}.indigox{background:#3f51b5}.orangex{background:#ff9800}.pinkx{background:#e91e63}.bluex{background:#2196F3}.purplex{background:#9c27b0}.redx{background:#F44336}.greenx{background:#4CAF50}.highlight{position:absolute;height:50%;width:100px;top:25%;left:0;pointer-events:none;opacity:.5}.datainput input:focus~.highlight,.datainput textarea:focus~.highlight{animation:inputHighlighter .3s ease}.datainput input:focus~label,.datainput input:valid~label,.datainput textarea:focus~label,.datainput textarea:valid~label{top:-10px;font-size:13px;color:#21a51f}
+a{
+	text-decoration: none;
+}
 
-/* Default Whatsapp Form CSS by www.idblanter.com */
-form.whatsapp-form {
-    box-shadow: 0 1px 6px rgba(32,33,36,.28);
-    border-radius: .5rem;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #444;
-    font-size: 14px;
-    line-height: 1.5;
+.bar_wpp {
+  position: fixed;
+  bottom: 5px;
+  right: 70px;
+  z-index: 120;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
 }
- .whatsapp-form a.send_form {
-    color: #fff;
-    background: #21a51f;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 25px;
-    border-radius: .3rem;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: 15px;
+
+.bar_wpp a {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
-#text-info span {
-    display: block;
-    padding: 10px 15px;
+
+.bar_wpp .icon_wpp i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.bar_wpp .icon_wpp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c7619;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  float: left;
+  z-index: 2;
+}
+
+.bar_wpp .txt_wpp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-weight: 700;
-    margin: 15px 0;
-    border-radius: .5rem;
+    background-color: #0e3f14;
+    color: #ffffff;
+    padding: 0px 5px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    padding-right: 11px;
+    padding-left: 45px!important;
+    margin-left: -35px;
+    z-index: 1;
+    border-radius: 50px;
 }
-#text-info span.yes {
-    background: #c6ffc5;
-    color: #0ea904;
+
+
+.bar_wpp a:hover{text-decoration: none !important;}
+.bar_wpp a:hover .icon_wpp{background-color: #0e3f14;}
+.bar_wpp a:hover .txt_wpp{background-color: #0c7619;}
+
+
+@media(max-width: 475px){
+  .bar_wpp{right: auto;left: 5px;bottom: 15px;}
+  .bar_wpp .icon_wpp i{font-size: 25px;}
+  .bar_wpp .txt_wpp{display: none;}
 }
-#text-info span.no {
-    background: #ffc5c5;
-    color: #ce0404;
-}
-.whatsapp-form{
-  width:100%;
-  max-width:700px;
-  margin:0 auto;
-  box-sizing:border-box;
-}       
-.adsIconMobile span{line-height:16px;color:rgba(49,53,59,0.96);font-size:12px;font-weight:bold;max-width:175px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.adsMobileWidget{position:fixed;box-shadow:rgb(0 0 0 / 15%) 0 2px 8px;top:0;left:0;right:0;height:48px;background:#ffffff;padding:0 8px;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;z-index:32;display:flex}
-.adsIconMobile,.adsBtnMobile{cursor:pointer;height:100%;display:flex;-webkit-box-align:center;align-items:center}.adsIconMobile img{width:40px;height:40px;margin-right:8px}.mobile .adsIconMobile span{line-height:16px;color:rgba(49,53,59,0.96);font-size:12px;font-weight:bold;max-width:175px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.btnMobile{margin-right:12px;line-height:30px;border-radius:8px;text-align:center;width:78px;background:#03ac0e;color:#fff;font-weight:700;border:0;cursor:pointer}.btnMobile a{color:#fff!important}
-.page-image {
-                object-position: center;
-                
-            }
-        
-        .display-image {
-            border-radius: 50%;
-        }
 
-        .page-title {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .page-bioline {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .page-item-title {
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .page-item-each {
-            color: #1F365C;
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: none;
-            border-radius: 8px;
-            
-                            min-height: 60px;
-                    }
-
-        .page-item-wrap {
-                            margin: 16px 0;
-                    }
-
-        .page-item-wrap:last-child {
-            margin-bottom: 0;
-        }
-
-                    .page-item-wrap:hover {
-                transform: translate3d(0px, 0px, 0px) scale(1.015);
-            }
-        
-         .page-item-wrap{
-            
-         }
-
-        .page-item {
-            border: 0px solid #FFFFFF;
-            background: #FFFFFF ;
-            border-radius: 8px;
-           box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1), inset 0px 0px 2px 1px rgba(24, 39, 75, 0.05);
-        }
-
-        
-        .embed-wrap iframe, .embed-wrap-inside {
-                            border-radius: 8px;
-                    }
-
-        .link-each-image, .page-item-wrap {
-            border-radius: 8px;
-        }
-
-        .page-text-font {
-            font-family: 'Inter', sans-serif;
-            text-transform: none;
-            
-        }
-
-        .page-text-color {
-            color: #000;
-        }
-
-        .social-icon-fill path, .social-icon-fill circle, .social-icon-fill rect {
-            fill: #1F365C;
-        }
-
-        .page-overlay-btn {
-            border: 2px solid #1F365C;
-        }
         .produk-showcase{width:100%;height:auto;margin:0;padding:0;}
 .produk-showcase .produk-box{width:100%;height:264px;overflow-x:scroll;overflow-y:hidden;border:1px solid #F48FB1;background:#FCE4EC;padding:10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:block;white-space:nowrap;}
 .produk-showcase .produk-box::-webkit-scrollbar{width:2px;height:8px;}
@@ -230,21 +171,21 @@ form.whatsapp-form {
 
                     <div class="flex-both-center flex-wrap mt-24">
                         <div class="page-social relative">
-                        <a class="social-icon-anchor" data-id="youtube" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://www.youtube.com/channel/UCQT2D2ixWyczpiz-dm5JkOQ"></a>
+                        <a class="social-icon-anchor" data-id="youtube" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://www.youtube.com/@raksamalafarm"></a>
                         <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M29.402 7.73115C29.2324 7.09292 28.8982 6.51043 28.4327 6.04197C27.9672 5.57352 27.3869 5.23553 26.7498 5.06183C24.4043 4.43115 15.0293 4.43115 15.0293 4.43115C15.0293 4.43115 5.6543 4.43115 3.30884 5.06183C2.67171 5.23553 2.09137 5.57352 1.62591 6.04197C1.16044 6.51043 0.826179 7.09292 0.65657 7.73115C0.0292969 10.0868 0.0292969 14.9993 0.0292969 14.9993C0.0292969 14.9993 0.0292969 19.9118 0.65657 22.2675C0.826179 22.9057 1.16044 23.4882 1.62591 23.9567C2.09137 24.4252 2.67171 24.7631 3.30884 24.9368C5.6543 25.5675 15.0293 25.5675 15.0293 25.5675C15.0293 25.5675 24.4043 25.5675 26.7498 24.9368C27.3869 24.7631 27.9672 24.4252 28.4327 23.9567C28.8982 23.4882 29.2324 22.9057 29.402 22.2675C30.0293 19.9118 30.0293 14.9993 30.0293 14.9993C30.0293 14.9993 30.0293 10.0868 29.402 7.73115Z" fill="#FF0302"></path> <path d="M11.9619 19.4611V10.5396L19.8028 15.0003L11.9619 19.4611Z" fill="#FEFEFE"></path> </svg>                    </div>
    
                                     <div class="page-social relative">
-                        <a class="social-icon-anchor" data-id="facebook" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://web.facebook.com/kotasubangtercinta/"></a>
+                        <a class="social-icon-anchor" data-id="facebook" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://web.facebook.com/RaksamalaFarm"></a>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M30 15C30 6.71572 23.2843 0 15 0C6.71572 0 0 6.71572 0 15C0 22.4868 5.48525 28.6925 12.6562 29.8178V19.3359H8.84766V15H12.6562V11.6953C12.6562 7.93594 14.8957 5.85938 18.322 5.85938C19.9626 5.85938 21.6797 6.15234 21.6797 6.15234V9.84375H19.7883C17.925 9.84375 17.3438 11.0001 17.3438 12.1875V15H21.5039L20.8389 19.3359H17.3438V29.8178C24.5147 28.6925 30 22.4868 30 15Z" fill="#1877F2"></path> <path d="M20.8389 19.3359L21.5039 15H17.3438V12.1875C17.3438 11.0013 17.925 9.84375 19.7883 9.84375H21.6797V6.15234C21.6797 6.15234 19.9632 5.85938 18.322 5.85938C14.8957 5.85938 12.6562 7.93594 12.6562 11.6953V15H8.84766V19.3359H12.6562V29.8178C14.2093 30.0607 15.7907 30.0607 17.3438 29.8178V19.3359H20.8389Z" fill="white"></path> </svg>                    </div>
                                     <div class="page-social relative">
                         <a class="social-icon-anchor" data-id="github" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://github.com/candil07"></a>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.3805C0 22.1748 4.29755 27.9399 10.2581 29.9736C11.0086 30.1153 11.2821 29.6404 11.2821 29.2325C11.2821 28.8671 11.2692 27.9002 11.2619 26.6171C7.08954 27.5462 6.20921 24.555 6.20921 24.555C5.52687 22.7781 4.54342 22.3051 4.54342 22.3051C3.1815 21.3505 4.64655 21.3704 4.64655 21.3704C6.15212 21.4789 6.94404 22.9556 6.94404 22.9556C8.28294 25.3057 10.4552 24.6268 11.3097 24.2331C11.446 23.2389 11.8337 22.5619 12.2619 22.1767C8.93121 21.7886 5.42926 20.4696 5.42926 14.5761C5.42926 12.8964 6.014 11.5236 6.97351 10.4482C6.81973 10.0592 6.30498 8.49565 7.12084 6.37882C7.12084 6.37882 8.38055 5.96433 11.2453 7.95464C12.4424 7.61379 13.7251 7.4429 15.0005 7.43723C16.2749 7.4429 17.5576 7.61379 18.7566 7.95464C21.6194 5.96433 22.8773 6.37882 22.8773 6.37882C23.695 8.49565 23.1803 10.0592 23.0265 10.4482C23.9878 11.5236 24.568 12.8964 24.568 14.5761C24.568 20.4838 21.0614 21.7839 17.7197 22.1654C18.2584 22.6403 18.7372 23.5788 18.7372 25.013C18.7372 27.0694 18.7197 28.7283 18.7197 29.2325C18.7197 29.6441 18.9895 30.1219 19.7511 29.9718C25.7061 27.9342 30 22.1739 30 15.3805C30 6.88584 23.2834 0 14.9986 0C6.7166 0 0 6.88584 0 15.3805Z" fill="black"></path> </svg>                    </div>
                                     <div class="page-social relative">
-                        <a class="social-icon-anchor" data-id="instagram" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://instagram.com/candilcode"></a>
+                        <a class="social-icon-anchor" data-id="instagram" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://www.instagram.com/rijalafauzan/"></a>
 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M24.8057 6.99358C24.8057 5.99655 23.9976 5.19149 23.0043 5.19149C22.0109 5.19149 21.2021 5.99655 21.2021 6.99358C21.2021 7.98694 22.0109 8.79199 23.0043 8.79199C23.9976 8.79199 24.8057 7.98694 24.8057 6.99358Z" fill="url(#paint0_linear_489_190)"></path> <path d="M27.2082 21.0606C27.1415 22.5232 26.8968 23.3178 26.6937 23.8456C26.4209 24.5454 26.0955 25.0458 25.5677 25.5707C25.0458 26.0955 24.5454 26.4202 23.8456 26.69C23.3178 26.8961 22.5201 27.1415 21.0576 27.2112C19.4764 27.2809 19.0079 27.2957 14.9981 27.2957C10.9921 27.2957 10.5199 27.2809 8.93866 27.2112C7.4761 27.1415 6.68216 26.8961 6.15431 26.69C5.45083 26.4202 4.95417 26.0955 4.42933 25.5707C3.90076 25.0458 3.57534 24.5454 3.30625 23.8456C3.10309 23.3178 2.85479 22.5232 2.79174 21.0606C2.71468 19.4793 2.70056 19.0034 2.70056 15.0019C2.70056 10.9921 2.71468 10.5199 2.79174 8.93867C2.85479 7.4761 3.10309 6.68217 3.30625 6.14987C3.57534 5.45083 3.90076 4.9534 4.42933 4.42855C4.95417 3.90449 5.45083 3.57901 6.15431 3.30625C6.68216 3.09942 7.4761 2.85774 8.93866 2.78808C10.5199 2.71836 10.9921 2.70056 14.9981 2.70056C19.0079 2.70056 19.4764 2.71836 21.0576 2.78808C22.5201 2.85774 23.3178 3.09942 23.8456 3.30625C24.5454 3.57901 25.0458 3.90449 25.5677 4.42855C26.0955 4.9534 26.4209 5.45083 26.6937 6.14987C26.8968 6.68217 27.1415 7.4761 27.2082 8.93867C27.2816 10.5199 27.2994 10.9921 27.2994 15.0019C27.2994 19.0034 27.2816 19.4793 27.2082 21.0606ZM29.9088 8.81563C29.8354 7.21735 29.5833 6.12541 29.209 5.17435C28.828 4.18764 28.3172 3.35145 27.481 2.51525C26.6485 1.68279 25.8123 1.17201 24.8256 0.786545C23.8708 0.415873 22.7826 0.160843 21.1836 0.0911789C19.5846 0.0140648 19.0738 -1.90735e-06 14.9981 -1.90735e-06C10.9261 -1.90735e-06 10.4117 0.0140648 8.81268 0.0911789C7.21735 0.160843 6.12985 0.415873 5.17062 0.786545C4.18764 1.17201 3.35145 1.68279 2.51898 2.51525C1.68279 3.35145 1.17201 4.18764 0.787268 5.17435C0.416596 6.12541 0.16457 7.21735 0.0874557 8.81563C0.0177914 10.4146 0 10.9261 0 15.0019C0 19.0739 0.0177914 19.5846 0.0874557 21.1836C0.16457 22.7789 0.416596 23.8701 0.787268 24.8257C1.17201 25.8086 1.68279 26.6485 2.51898 27.481C3.35145 28.3135 4.18764 28.828 5.17062 29.2127C6.12985 29.5833 7.21735 29.8354 8.81268 29.9088C10.4117 29.9822 10.9261 30 14.9981 30C19.0738 30 19.5846 29.9822 21.1836 29.9088C22.7826 29.8354 23.8708 29.5833 24.8256 29.2127C25.8123 28.828 26.6485 28.3135 27.481 27.481C28.3172 26.6485 28.828 25.8086 29.209 24.8257C29.5833 23.8701 29.8354 22.7789 29.9088 21.1836C29.9822 19.5846 30 19.0739 30 15.0019C30 10.9261 29.9822 10.4146 29.9088 8.81563Z" fill="url(#paint1_linear_489_190)"></path> <path d="M14.9978 19.9979C12.2379 19.9979 9.99841 17.762 9.99841 15.0022C9.99841 12.2378 12.2379 9.99911 14.9978 9.99911C17.7585 9.99911 20.0009 12.2378 20.0009 15.0022C20.0009 17.762 17.7585 19.9979 14.9978 19.9979ZM14.9978 7.29482C10.7434 7.29482 7.29785 10.7478 7.29785 15.0022C7.29785 19.2528 10.7434 22.7021 14.9978 22.7021C19.2522 22.7021 22.7015 19.2528 22.7015 15.0022C22.7015 10.7478 19.2522 7.29482 14.9978 7.29482Z" fill="url(#paint2_linear_489_190)"></path> <defs> <linearGradient id="paint0_linear_489_190" x1="0.268257" y1="29.6897" x2="27.4987" y2="2.4589" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFD521"></stop> <stop offset="0.05" stop-color="#FFD521"></stop> <stop offset="0.501119" stop-color="#F50000"></stop> <stop offset="0.95" stop-color="#B900B4"></stop> <stop offset="0.950079" stop-color="#B900B4"></stop> <stop offset="1" stop-color="#B900B4"></stop> </linearGradient> <linearGradient id="paint1_linear_489_190" x1="0.270596" y1="29.7272" x2="27.5237" y2="2.47414" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFD521"></stop> <stop offset="0.05" stop-color="#FFD521"></stop> <stop offset="0.501119" stop-color="#F50000"></stop> <stop offset="0.95" stop-color="#B900B4"></stop> <stop offset="0.950079" stop-color="#B900B4"></stop> <stop offset="1" stop-color="#B900B4"></stop> </linearGradient> <linearGradient id="paint2_linear_489_190" x1="0.277326" y1="29.7282" x2="27.5238" y2="2.48175" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFD521"></stop> <stop offset="0.05" stop-color="#FFD521"></stop> <stop offset="0.501119" stop-color="#F50000"></stop> <stop offset="0.95" stop-color="#B900B4"></stop> <stop offset="0.950079" stop-color="#B900B4"></stop> <stop offset="1" stop-color="#B900B4"></stop> </linearGradient> </defs> </svg>                     
                       </div>
                                      <div class="page-social relative">
-                        <a class="social-icon-anchor" data-id="tiktok" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://www.tiktok.com/@rumahku107"></a>
+                        <a class="social-icon-anchor" data-id="tiktok" data-type="social_link" target="_blank" rel="noopener nofollow" href="https://www.tiktok.com/@raksamalafarm"></a>
 <svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M14.5172 0V21.2414C14.5172 24.9741 11.4913 28 7.75862 28C4.02594 28 1 24.9741 1 21.2414C1 17.5087 4.02594 14.4828 7.75862 14.4828M23.2069 10.6207C18.4077 10.6207 14.5172 6.7302 14.5172 1.93103" stroke="black" stroke-width="1.5"></path> </svg>                      </div>
 
                                     
@@ -397,41 +338,15 @@ form.whatsapp-form {
             </div>
 
         </div>
-        <h2>Form Pertanyaan</h2>
-<form class="whatsapp-form">
-<div class="datainput">
-<input class="validate" id="wa_name" name="name" required="" type="text" value=''/>
-<span class="highlight"></span><span class="bar"></span>
-<label>Your Name</label>
-</div>
-<div class="datainput">
-<input class="validate" id="wa_email" name="email" required="" type="email" value=''/>
-<span class="highlight"></span><span class="bar"></span>
-<label>Email Address</label>
-</div>
-<div class="datainput">
-<select id="wa_select">
-  <option hidden='hidden' selected='selected' value='default'>Select Option</option>
-  <option value="1">Tanya Lokasi </option>
-  <option value="2">Beli Partai</option>
-  <option value="3">Tanya Stok</option>
-</select>
-</div>
-<div class="datainput">
-<input class="validate" id="wa_number" name="count" required="" type="number" value=''/>
-<span class="highlight"></span><span class="bar"></span>
-<label>Input Number</label>
-</div>
 
-<div class="datainput">
-<textarea id='wa_textarea' placeholder='' maxlength='5000' row='1' required=""></textarea>
-<span class="highlight"></span><span class="bar"></span>
-<label>Description</label>
+<div class="bar_wpp">
+		<a href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=5548999999999" title="Message on WhatsApp" target="_blank">
+				<div class="icon_wpp">  <svg viewBox='0 0 32 32'><g><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'></path><path d='M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z'></path></g></svg></div>
+				<div class="txt_wpp">
+						Pesan di WhatsApp
+				</div>
+		</a>
 </div>
-<a class="send_form" href="javascript:void" type="submit" title="Send to Whatsapp">Send to Whatsapp</a>
-<div id="text-info"></div>
-</form>
-
 </body>
     <script type="text/javascript">
         var _paq = window._paq = window._paq || [];
