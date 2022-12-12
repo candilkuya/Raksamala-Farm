@@ -32,6 +32,102 @@
     
 
     <style>
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import url('http://fonts.googleapis.com/css?family=Lato:100,300,400|Raleway:100,300,400,500,600,700|Open+Sans:100,300,400,500,600');
+.trwpwhatsappballon {
+font-size: 14px;
+border-radius: 12px; 
+border: 1px solid #fff;
+max-width: 250px;
+}
+
+.trwpwhatsapptitle {
+background-color: #22c15e; 
+color: white; 
+padding: 14px; 
+border-radius: 12px 12px 0px 0px;
+text-align: center;
+}
+
+.trwpwhatsappmessage {
+padding: 16px 12px;
+background-color: white;
+}
+
+.trwpwhatsappinput {
+background-color: white;
+border-radius: 0px 0px 12px 12px;
+}
+
+.trwpwhatsappinput input {
+width: 206px;
+border-radius: 10px;
+margin: 1px 1px 0px 10px;
+padding:10px;
+font-family: "Raleway", Arial, sans-serif;
+font-weight: 300;
+font-size: 13px;
+background-color: #efefef;
+border: 1px solid #d4d4d4;
+}
+
+.trwpwhatsappbutton {
+background-color: #22c15e; 
+border-radius: 20px; 
+padding: 8px 15px; 
+cursor: pointer; 
+color: #fff;
+max-width: 220px;
+margin-top: 10px;
+margin-bottom: 10px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.trwpwhatsappall {
+position: fixed; 
+z-index: 9999999999999999999; 
+bottom: 0; 
+right: 10px;
+font-family: "Raleway", Arial, sans-serif;
+font-weight: 300;
+font-size: 15px;
+}
+
+.trwpwhatsappsendbutton {
+  color: #22c15e;
+  cursor:pointer;
+}
+
+button {border: none;}
+button i {
+float: right;
+position: absolute;
+z-index: 999999999999;
+right: 23px;
+top: 11;
+bottom: 81px;
+font-size: 18px !important;
+}
+
+.kapat {
+position: absolute;
+right: 8px;
+top: 6px;
+font-size: 13px;
+border: 1px solid #fff;
+border-radius: 99px;
+padding: 2px 5px 2px 5px;
+color: white;
+font-size: 10px;
+cursor: pointer;
+}        
 .adsIconMobile span{line-height:16px;color:rgba(49,53,59,0.96);font-size:12px;font-weight:bold;max-width:175px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .adsMobileWidget{position:fixed;box-shadow:rgb(0 0 0 / 15%) 0 2px 8px;top:0;left:0;right:0;height:48px;background:#ffffff;padding:0 8px;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;z-index:32;display:flex}
 .adsIconMobile,.adsBtnMobile{cursor:pointer;height:100%;display:flex;-webkit-box-align:center;align-items:center}.adsIconMobile img{width:40px;height:40px;margin-right:8px}.mobile .adsIconMobile span{line-height:16px;color:rgba(49,53,59,0.96);font-size:12px;font-weight:bold;max-width:175px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.btnMobile{margin-right:12px;line-height:30px;border-radius:8px;text-align:center;width:78px;background:#03ac0e;color:#fff;font-weight:700;border:0;cursor:pointer}.btnMobile a{color:#fff!important}
@@ -133,45 +229,7 @@
 .produk-showcase .desk-produk .harga-produk{color:#880E4F;font-family:Roboto,sans-serif;font-size:14px;font-weight:700;margin-bottom:5px;line-height:1.1;display:block;}
 .produk-showcase .desk-produk a.link-produk{background:#ee4d2d;color:#fff;font-family:Roboto,sans-serif;font-size:14px;font-weight:500;padding:8px 12px;display:block;text-align:center;}
 .produk-showcase .google-auto-placed{display:none;}
-.fixed-tabs-Whats {
-  position: fixed;
-  right: 0px;
-  bottom: 60px;
-  z-index: 100;
-}
-.aba-whatsphone {
-  background: #1EBEA5;
-  height: 60px;
-  width: 70px;
-  border-radius: 30px 0 0 30px;
-  transition: 0.7s ease;
-}
-.aba-whatsphone:hover {
-  width: 280px;
-  transition: 0.7s ease;
-}
-.aba-whatsphone-icone {
-  background-image: url(data:image/png;base64,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);
-    background-repeat: no-repeat;
-    width: 280px;
-    background-size: 44px;
-    background-position: 16px 7px;
-    padding: 7px;
-}
-.aba-whatsphone-icone a {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 20px;
-  margin-left: 70px;
-  text-decoration: none;
-  height: 60px;
-  font-family: sans-serif;
-}
-.aba-whatsphone-icone a strong {
-  display: block;
-  font-size: 21px;
-  margin-left: 70px;
-} 
+
     </style>
    
 </head>
@@ -389,13 +447,31 @@
             </div>
 
         </div>
-        <div class="fixed-tabs-Whats">
-            <div class="aba-whatsphone">
-              <div class="aba-whatsphone-icone">
-                <a target="_blank" href="https://wa.me/6283148657966?text=Hallo%20Admin%20Raksamala%20Farm">Pasang Iklan <br><strong>Chat Admin!</strong></a>          
-              </div>
-            </div>          
-          </div>
+        <div class="trwpwhatsappall">
+<div class="trwpwhatsappballon">
+ <span id="kapatac" class="kapat">X</span>
+  <div class="trwpwhatsapptitle">
+     Admin Raksamala Farm
+  </div>
+  <div class="trwpwhatsappmessage">
+    Hallo, Kami dari Raksamala Farm<br/>Ada yang bisa kami Bantu?
+  </div>
+  <div class="trwpwhatsappinput">
+    <form action="https://web.whatsapp.com/send?" method="get" target="_blank">
+      <input type="text" name="phone" value="6283148657966" hidden>
+    	<input type="text" name="text" placeholder="Buradan cevap verebilirsiniz." autocomplete="off">
+      <button class="trwpwhatsappsendbutton" type="submit">
+      <i class="fa fa-paper-plane-o"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+
+<div id="ackapa" class="trwpwhatsappbutton">
+<i class="fa fa-whatsapp"></i> <span>Marketing Raksamala Farm</span>
+</div>
+
 </body>
     <script type="text/javascript">
         var _paq = window._paq = window._paq || [];
@@ -412,6 +488,16 @@
             g.src = 'https://cdn.bio.link/matomo.js';
             s.parentNode.insertBefore(g, s);
         })();
+        // TR-WP.COM
+
+$(document).ready(function() {
+$("#ackapa").click(function() {
+$(".trwpwhatsappballon").toggle(1000);
+});
+$("#kapatac").click(function() {
+$(".trwpwhatsappballon").toggle(1000);
+});
+});
     </script>
     <!-- End Matomo Code -->
     <script>
